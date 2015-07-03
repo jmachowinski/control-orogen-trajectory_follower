@@ -62,6 +62,9 @@ bool Task::startHook()
     trFollower->setNoOrientationPointTurnLowerLimit(_noOrientationPointTurnLowerLimit.get());   
     trFollower->setNoOrientationRotationalVelocity(_noOrientationRotationalVelocity.get());
 
+    trFollower->setEndReachedDistance(_endReachedDistance.get());
+    trFollower->setDistanceError(_distanceError.get());
+    
     driveSpeed = _forwardVelocity.get();
     
     return true;

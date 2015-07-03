@@ -23,7 +23,13 @@ task_context "Task" do
 
     property("forwardLength", "double", 0.1).
             doc "moving the pose estimation point forward for no orientation controller. This value needs to be greater than 0."
-    
+
+    property("endReachedDistance", "double", 0.1).
+            doc "Distance to the end point of a trajectory, under wich the trajectory is considdered driven"
+
+    property("distanceError", "double", 0.1).
+            doc "Percentage of distance error in pose input. This parameter is used to track the position on the spline."
+
     property("gpsCenterofRotationOffset", "double").
             doc "Offset between GPS (w.r.t which Pose Estimator works) and approximated center of rotation"
 
