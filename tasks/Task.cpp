@@ -176,6 +176,7 @@ void Task::updateHook()
     
     _motion_command.write(mc);
     _currentCurvePoint.write(trFollower->getCurvePoint());
+    _currentCurvePointWp.write(base::Waypoint(Vector3d(trFollower->getCurvePoint().pose.position.x(), trFollower->getCurvePoint().pose.position.y(), 0.0), trFollower->getCurvePoint().pose.orientation, 0.3, 0.3));
     _poseError.write(trFollower->getControlError());
     _currentPose.write(trFollower->getPose());
 }

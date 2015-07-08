@@ -75,9 +75,12 @@ task_context "Task" do
 
     output_port("currentCurvePoint", "trajectory_follower/CurvePoint").
     	doc "Corresponding point on the reference curve"
-    
+
     output_port("currentPose", "trajectory_follower/RobotPose").
-    	doc "Current pose of the robot"
+        doc "Current pose of the robot"
+
+    output_port("currentCurvePointWp", "base/Waypoint").
+        doc "Corresponding point on the reference curve"
 
     output_port("poseError", "trajectory_follower/TrajError").
     	doc "Pose error calculated by NURBSCurve3D"
