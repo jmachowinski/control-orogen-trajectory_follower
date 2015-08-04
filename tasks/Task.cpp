@@ -120,9 +120,10 @@ void Task::updateHook()
         return;
     }
     else if (trajectory_status == RTT::NewData)
-        {
+    {
         if(!trajectories.empty())
         {
+            state(RUNNING);
 	    // got a new trajectory
 	    // take the first spline and pass it to the follower
 	    // afterwards remove it from the list of remaining 
